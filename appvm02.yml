@@ -38,7 +38,7 @@ spec:
         - cloudInitConfigDrive:
             userData: |
               #cloud-config
-              user: cloud-user
+              user: quasys
               password: virtdemo
               chpasswd:
                 expire: false
