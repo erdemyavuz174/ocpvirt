@@ -12,6 +12,9 @@ spec:
           kind: DataSource
           name: rhel8
           namespace: openshift-virtualization-os-images
+        storage:
+          resources:
+            requests: {}
   instancetype:
     name: u1.large
   preference:
