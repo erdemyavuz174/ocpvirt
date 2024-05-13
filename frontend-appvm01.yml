@@ -1,12 +1,12 @@
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: database_appvm01-virt-demo-rhel8
+  name: frontend-appvm01-virt-demo-rhel8
   namespace: demo-erdem
 spec:
   dataVolumeTemplates:
     - metadata:
-        name: database_appvm01-virt-demo-rhel8-volume
+        name: frontend-appvm01-virt-demo-rhel8-volume
       spec:
         sourceRef:
           kind: DataSource
@@ -28,14 +28,14 @@ spec:
           disks:
             - disk:
                 bus: virtio
-              name: database_appvm01-virt-demo-rhel8-disk
+              name: frontend-appvm01-virt-demo-rhel8-disk
             - disk:
                 bus: virtio
               name: cloudinitdisk
       volumes:
         - dataVolume:
-            name: database_appvm01-virt-demo-rhel8-volume
-          name: database_appvm01-virt-demo-rhel8-disk
+            name: frontend-appvm01-virt-demo-rhel8-volume
+          name: frontend-appvm01-virt-demo-rhel8-disk
         - cloudInitConfigDrive:
             userData: |
               #cloud-config
